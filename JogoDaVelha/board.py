@@ -6,15 +6,15 @@ Licensa:
 Copyright 2017 E.S Pereira
 """
 
-from curses import initscr, wrapper
+from curses import initscr
 from restart_screen import restart_screen
 
 def board(StandardScreen, posicoes, x_center):
     StandardScreen.clear()
     restart_screen(StandardScreen, clean=False)
 
-    StandardScreen.addstr(10, x_center - 3, "______")
-    StandardScreen.addstr(12, x_center - 3, "______")
+    StandardScreen.addstr(10, x_center - 3, "------")
+    StandardScreen.addstr(12, x_center - 3, "------")
     i=9
     for linha in posicoes:
         tela = "%s|%s|%s" % tuple(linha)
